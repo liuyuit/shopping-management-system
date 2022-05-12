@@ -14,14 +14,14 @@ public final class DbConn
 	{
 		Connection conn = null;
 		
-		String user   = "scott";
-		String passwd = "tiger";
-		String url = "jdbc:oracle:thin:@localhost:1521:orcl";//orcl为oracle数据库实例名字
+		String user   = "root";
+		String passwd = "root";
+		String url = "jdbc:mysql://localhost/db_example";//orcl为oracle数据库实例名字
 		
 		//已加载完驱动
 		try
 		{
-			Class.forName("oracle.jdbc.driver.OracleDriver"); 
+			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url,user,passwd);
 		}catch (SQLException e)
 		{
